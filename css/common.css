@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff') format('woff'), /* chrome、firefox */ url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+[class^=icon-],
+[class*=" icon-"],
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  display: block;
+}
+body,
+html {
+  min-height: 100%;
+  background: #f5f3f1 !important;
+}
+body {
+  background: #f5f3f1 !important;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-hide {
+  height: 100%;
+  overflow: hidden;
+}
+body.white-bg {
+  background: #ffffff;
+}
+/* 综合布局 */
+.f_l {
+  float: left;
+}
+.f_r {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  line-height: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+div,
+dl,
+dt,
+dd,
+p ::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* 取消 选中高亮效果 */
+  -webkit-tap-highlight-color: transparent;
+  /* 设置字体
+        有的移动设备 没有微软雅黑,使用第二个
+     */
+  font-family: "微软雅黑", "microsoft sans serif", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.display-flex {
+  display: -moz-box;
+  /* Firefox */
+  display: -ms-flexbox;
+  /* IE10 */
+  display: -webkit-box;
+  /* Safari */
+  display: -webkit-flex;
+  /* Chrome, WebKit */
+  display: flexbox;
+  display: flex;
+}
+.no-data {
+  width: 100%;
+  height: 100%;
+  padding: 40% 0;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+}
+.flex1 {
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  flex: 1;
+}
+.align-justify {
+  -moz-box-align: justify-content;
+  -ms-flex-align: align-content;
+  -ms-flex-item-align: justify-content;
+  -webkit-box-align: justify-content;
+  /*老语法*/
+  -webkit-align-items: justify-content;
+  /*新语法*/
+  align-content: justify-content;
+  align-items: justify-content;
+  justify-content: justify-content;
+}
+.break {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item-move {
+  /* applied to the element when moving */
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+/* 边角   #somediv {  
+    .border-radius(20px);  
+}  */
+.shadow-bg {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: block;
+}
+.add-zindex {
+  z-index: 2100;
+}
+.mint-loadmore-top {
+  text-align: center;
+}
+.mint-loadmore-text {
+  font-size: 12px;
+  color: #959595;
+}
+.mint-loadmore-top span {
+  display: inline-block;
+  transition: .2s linear;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.mint-loadmore-bottom {
+  display: none;
+}
+/*背景的动画*/
+.fade-transition {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  opacity: 1;
+}
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}
+input::-webkit-input-placeholder {
+  color: #cecece;
+}
+input::-moz-placeholder {
+  color: #cecece;
+}
+/* firefox 19+ */
+input:-ms-input-placeholder {
+  color: #cecece;
+}
+[v-cloak] {
+  display: none;
+}
+.t-r-div {
+  text-align: right;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+img[lazy=loaded] {
+  /***
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+animation-name: fadeIn;***/
+}
+img[lazy=error] {
+  border-radius: 2px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.button {
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #000000;
+  opacity: 0.5;
+}

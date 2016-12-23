@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<script src="js/lib-flexible0.3.4/flexible_css.js"></script>
+		<script src="js/lib-flexible0.3.4/flexible.debug.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css" />
+		<script src="js/zepto/zepto.js"></script>
+		<script src="js/zepto/event.js"></script>
+		<script src="js/zepto/fx.js"></script>
+		<script src="js/swiper-3.4.0.jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/flexible.debug.css" />
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>首页</title>
+
+	</head>
+
+	<body>
+		<!--S 子盒子,学校选择,搜索,登陆-->
+		<div class="sub">
+			<!--学校选择-->
+			<div class="schoolShow " id="schoolBox" style="display:block">
+				<header>
+					<i class="icon iconfont icon-back"></i>
+					<h1>学校选择</h1>
+				</header>
+				<main class='main'>
+					<h1>当前定位学校</h1>
+					<ul class="curSchool">
+						<li class="clearfix">
+							<a href="#" class="clearfix"><i class="icon iconfont icon-location"></i>传媒</a>
+						</li>
+					</ul>
+					<h1>已开通学校</h1>
+					<ul class="schools">
+						<li>
+							<a href="#">清华大学</a>
+						</li>
+						<li>
+							<a href="#">北京传媒大学</a>
+						</li>
+						<li>
+							<a href="#">北京职业技术学院</a>
+						</li>
+
+					</ul>
+					<div class="fill"></div>
+				</main>
+			</div>
+			<div class="searchBox">
+				<header>
+					<form action="">
+						<input type="search" placeholder="输入您想住的小区或学校" />
+						<i class="fa fa-remove"></i>
+					</form>
+					<a href="#" class="toCancel toMain" id="toCancel">取消</a>
+				</header>
+				<main class='.main'>
+					<h1>热搜</h1>
+					<ul class="hot-words">
+						<li>龙腾苑</li>
+						<li>龙景苑</li>
+						<li>御春小区</li>
+						<li>沁春家园</li>
+						<li>凤山</li>
+						<li>清华</li>
+						<li>北大</li>
+					</ul>
+				</main>
+				
+			</div>
+			<div class="user-info"></div>
+		</div>
+		<!--E 子盒子,学校选择,搜索,登陆-->
+
+		<!--S 主窗口-->
+		<div class="main" style="display: block;">
+			<!--S 头部导航-->
+			<header class="ui-header clearfix">
+				<div class="city f_l" id="cityBtn">
+					<span>传媒</span>
+					<i class="icon iconfont icon-unfold"></i>
+				</div>
+				<div class="search f_l" id="showSearchIndex">请输入你要搜索的学校</div>
+				<div class="user f_r" id="userInfoBtn">
+					<i class="icon iconfont icon-user1"></i>
+				</div>
+			</header>
+			<!--E 头部导航-->
+
+			<!--S 轮播图-->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#"><img src="img/banner_1.jpg" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="img/banner_2.jpg" /></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="img/banner_3.jpg" /></a>
+					</div>
+
+				</div>
+				<!--轮播图小 原点-->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--E 轮播图-->
+
+			<!--S 导航菜单-->
+			<nav class="ui-nav">
+				<ul class="clearfix">
+					<li class="f_l">
+						<a href="#"><span class="icon iconfont icon-iconhouse"></span>
+							<p>合租</p>
+						</a>
+					</li>
+					<li class="f_l">
+						<a href="#"><span class="icon iconfont icon-house"></span>
+							<p>整租</p>
+						</a>
+					</li>
+					<li class="f_l">
+						<a href="#"><span class="icon iconfont icon-surecallhouse"></span>
+							<p>月租</p>
+						</a>
+					</li>
+					<li class="f_l">
+						<a href="#" class="button"><span class="icon iconfont icon-house6"></span>
+							<p>寄宿</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<!--E 导航菜单-->
+			<hr class="split"></hr>
+		</div>
+		<!--E 主窗口-->
+
+
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				loop: true,
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				autoplay: 5000,
+				speed: 1000,
+				effect: 'fade'
+			});
+		</script>
+	</body>
+
+</html>

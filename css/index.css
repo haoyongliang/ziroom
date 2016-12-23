@@ -1,0 +1,675 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+}
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+}
+input {
+  border: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none ;
+  -webkit-nbsp-mode: normal;
+  -webkit-user-drag: none;
+  -webkit-user-select: ​ none;
+  counter-increment: none;
+}
+select {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none ;
+  -webkit-user-drag: none;
+  -webkit-user-select: ​ none;
+  counter-increment: none;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff') format('woff'), /* chrome、firefox */ url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+[class^=icon-],
+[class*=" icon-"],
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  display: block;
+}
+body,
+html {
+  min-height: 100%;
+  background: #f5f3f1 !important;
+}
+body {
+  background: #f5f3f1 !important;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-hide {
+  height: 100%;
+  overflow: hidden;
+}
+body.white-bg {
+  background: #ffffff;
+}
+/* 综合布局 */
+.f_l {
+  float: left;
+}
+.f_r {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  line-height: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+div,
+dl,
+dt,
+dd,
+p ::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* 取消 选中高亮效果 */
+  -webkit-tap-highlight-color: transparent;
+  /* 设置字体
+        有的移动设备 没有微软雅黑,使用第二个
+     */
+  font-family: "微软雅黑", "microsoft sans serif", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.display-flex {
+  display: -moz-box;
+  /* Firefox */
+  display: -ms-flexbox;
+  /* IE10 */
+  display: -webkit-box;
+  /* Safari */
+  display: -webkit-flex;
+  /* Chrome, WebKit */
+  display: flexbox;
+  display: flex;
+}
+.no-data {
+  width: 100%;
+  height: 100%;
+  padding: 40% 0;
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+}
+.flex1 {
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  flex: 1;
+}
+.align-justify {
+  -moz-box-align: justify-content;
+  -ms-flex-align: align-content;
+  -ms-flex-item-align: justify-content;
+  -webkit-box-align: justify-content;
+  /*老语法*/
+  -webkit-align-items: justify-content;
+  /*新语法*/
+  align-content: justify-content;
+  align-items: justify-content;
+  justify-content: justify-content;
+}
+.break {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item-move {
+  /* applied to the element when moving */
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+/* 边角   #somediv {  
+    .border-radius(20px);  
+}  */
+.shadow-bg {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: block;
+}
+.add-zindex {
+  z-index: 2100;
+}
+.mint-loadmore-top {
+  text-align: center;
+}
+.mint-loadmore-text {
+  font-size: 12px;
+  color: #959595;
+}
+.mint-loadmore-top span {
+  display: inline-block;
+  transition: .2s linear;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.mint-loadmore-bottom {
+  display: none;
+}
+/*背景的动画*/
+.fade-transition {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  opacity: 1;
+}
+.fade-enter,
+.fade-leave {
+  opacity: 0;
+}
+input::-webkit-input-placeholder {
+  color: #cecece;
+}
+input::-moz-placeholder {
+  color: #cecece;
+}
+/* firefox 19+ */
+input:-ms-input-placeholder {
+  color: #cecece;
+}
+[v-cloak] {
+  display: none;
+}
+.t-r-div {
+  text-align: right;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+img[lazy=loaded] {
+  /***
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+animation-name: fadeIn;***/
+}
+img[lazy=error] {
+  border-radius: 2px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.button {
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #000000;
+  opacity: 0.5;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('../alifonts/iconfont.eot?t=1480174842503');
+  src: url('../alifonts/iconfont.eot?t=1480174842503#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../alifonts/iconfont.woff?t=1480174842503') format('woff'), /* chrome, firefox */ url('../alifonts/iconfont.ttf?t=1480174842503') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../alifonts/iconfont.svg?t=1480174842503#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-location:before {
+  content: "\e651";
+}
+.icon-unfold:before {
+  content: "\e661";
+}
+.icon-back:before {
+  content: "\e679";
+}
+.icon-right:before {
+  content: "\e6a3";
+}
+.icon-house:before {
+  content: "\e60a";
+}
+.icon-house1:before {
+  content: "\e621";
+}
+.icon-house2:before {
+  content: "\e60b";
+}
+.icon-house3:before {
+  content: "\e604";
+}
+.icon-house4:before {
+  content: "\e619";
+}
+.icon-iconhouse:before {
+  content: "\e600";
+}
+.icon-house5:before {
+  content: "\e64b";
+}
+.icon-house6:before {
+  content: "\e607";
+}
+.icon-housemine:before {
+  content: "\e78a";
+}
+.icon-user:before {
+  content: "\e78b";
+}
+.icon-house7:before {
+  content: "\e6b3";
+}
+.icon-surecallhouse:before {
+  content: "\e60f";
+}
+.icon-user1:before {
+  content: "\e67d";
+}
+.icon-xingzhuang10zhuanhuan01:before {
+  content: "\e632";
+}
+.icon-my-house:before {
+  content: "\e6d1";
+}
+.icon-house8:before {
+  content: "\e605";
+}
+.icon-houselaw:before {
+  content: "\e647";
+}
+.icon-house9:before {
+  content: "\e617";
+}
+.icon-house10:before {
+  content: "\e636";
+}
+.icon-house11:before {
+  content: "\e601";
+}
+.icon-subscription:before {
+  content: "\e7d3";
+}
+.icon-house12:before {
+  content: "\e618";
+}
+.sub {
+  /*选择学校模块*/
+  /*自定义搜索模块*/
+}
+.sub header {
+  height: 1.375rem;
+  line-height: 1.375rem;
+  text-align: center;
+  background-color: white;
+  position: relative;
+}
+.sub header h1 {
+  font-size: 0.5625rem;
+}
+.sub header i {
+  left: 0.53125rem;
+  font-size: 0.640625rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.sub .schoolShow .main i {
+  font-size: 0.53125rem;
+  color: #FEAE00;
+  margin-right: 0.1875rem;
+}
+.sub .schoolShow .main h1 {
+  padding-left: 0.5rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.46875rem;
+}
+.sub .schoolShow .main ul {
+  border-top: 0.03125rem solid #d1d1d1;
+  border-bottom: 0.03125rem solid #d1d1d1;
+  background-color: white;
+}
+.sub .schoolShow .main ul li {
+  margin-left: 0.5rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.46875rem;
+}
+.sub .schoolShow .main ul li a {
+  color: black;
+  display: block;
+  height: 1.25rem;
+}
+.sub .schoolShow .main ul li a:hover {
+  text-decoration: none;
+  background-color: balck;
+  opacity: 0.5;
+}
+.sub .schoolShow .main ul:last-of-type li {
+  border-bottom: 0.046875rem solid #d1d1d1;
+}
+.sub .schoolShow .main ul:last-of-type li:last-child {
+  border-bottom-width: 0;
+}
+.sub .searchBox {
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  background-color: white;
+  width: 10rem;
+}
+.sub .searchBox header {
+  font-size: 0.4375rem;
+}
+.sub .searchBox header form input {
+  border: 0.03125rem solid #d1d1d1;
+  width: 7.96875rem;
+  top: 0.1875rem;
+  left: 0rem;
+  height: 0.96875rem;
+  line-height: 0.96875rem;
+  padding-left: 0.3125rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+}
+.sub .searchBox header .toCancel {
+  width: 1.625rem;
+  left: 8.375rem;
+  height: 100%;
+  position: absolute;
+  color: balck;
+}
+.main {
+  /*S 头部导航栏*/
+  /*E 头部导航栏*/
+  /*S 轮播图*/
+  /*E 轮播图*/
+  /*S 导航菜单*/
+  /*E 导航菜单*/
+}
+.main .ui-header {
+  height: 1.375rem;
+  line-height: 1.375rem;
+  font-size: 0.4375rem;
+  text-align: center;
+  background-color: #fff;
+}
+.main .ui-header .city {
+  width: 2.03125rem;
+}
+.main .ui-header .city i {
+  font-size: 0.4375rem;
+}
+.main .ui-header .search {
+  width: 6.53125rem;
+  height: 0.96875rem;
+  line-height: 0.96875rem;
+  letter-spacing: 0.015625rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin-top: 0.1875rem;
+  color: #9d9d9d;
+  border: 0.03125rem solid #9d9d9d;
+}
+.main .ui-header .user {
+  width: 1.40625rem;
+  color: #9d9d9d;
+}
+.main .ui-header .user i {
+  font-size: 0.703125rem;
+}
+.main .swiper-container {
+  width: 10rem;
+  background-color: white;
+}
+.main .swiper-container .swiper-wrapper .swiper-slide a {
+  display: block;
+}
+.main .swiper-container .swiper-wrapper .swiper-slide a img {
+  width: 10rem;
+}
+.main .swiper-pagination span {
+  width: 0.140625rem;
+  height: 0.140625rem;
+}
+.main .swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+  opacity: 1;
+}
+.main .ui-nav ul li {
+  display: block;
+  width: 2.5rem;
+  position: relative;
+}
+.main .ui-nav ul li:nth-child(1) span {
+  background: #FFA000;
+}
+.main .ui-nav ul li:nth-child(2) span {
+  background: #FF585B;
+}
+.main .ui-nav ul li:nth-child(3) span {
+  background: #18D2BA;
+}
+.main .ui-nav ul li:nth-child(4) span {
+  background: #F8767F;
+}
+.main .ui-nav ul li a {
+  font-size: 0.4375rem;
+  padding-top: 0.078125rem;
+  padding-bottom: 0.3125rem;
+  text-decoration: none;
+  color: #3C3C3C;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+}
+.main .ui-nav ul li a span {
+  font-size: 1.09375rem;
+  margin-bottom: 0.234375rem;
+  border-radius: 0.09375rem;
+  color: white;
+  width: 1.42857143rem;
+}
+.main .split {
+  height: 0.46875rem;
+}
+/*页面导航*/
